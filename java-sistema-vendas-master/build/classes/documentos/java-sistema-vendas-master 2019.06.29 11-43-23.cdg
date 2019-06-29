@@ -1,0 +1,1167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="java-sistema-vendas-master">
+  <ClassDiagramComponents>
+    <Class name="ClienteDAO" package="com.dao" visibility="public" xPosition="20.0" yPosition="20.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="inserir" returnType="void" visibility="public">
+          <Argument type="Cliente" name="cliente"/>
+        </Method>
+        <Method name="alterar" returnType="void" visibility="public">
+          <Argument type="Cliente" name="cliente"/>
+        </Method>
+        <Method name="excluir" returnType="void" visibility="public">
+          <Argument type="Cliente" name="cliente"/>
+        </Method>
+        <Method name="listarTodos" returnType="ArrayList&lt;Cliente&gt;" visibility="public"/>
+        <Method name="recuperar" returnType="Cliente" visibility="public">
+          <Argument type="int" name="codigo"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="CompraDAO" package="com.dao" visibility="public" xPosition="320.0" yPosition="20.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="inserir" returnType="void" visibility="public">
+          <Argument type="Compra" name="compra"/>
+        </Method>
+        <Method name="alterar" returnType="void" visibility="public">
+          <Argument type="Compra" name="compra"/>
+        </Method>
+        <Method name="excluir" returnType="void" visibility="public">
+          <Argument type="Compra" name="compra"/>
+        </Method>
+        <Method name="listarTodos" returnType="ArrayList&lt;Compra&gt;" visibility="public"/>
+        <Method name="recuperar" returnType="Compra" visibility="public">
+          <Argument type="int" name="codigo"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Conexao" package="com.dao" visibility="public" xPosition="620.0" yPosition="20.0">
+      <Fields>
+        <Field name="SERVIDOR" type="String" visibility="private" isFinal="true"/>
+        <Field name="PORTA" type="String" visibility="private" isFinal="true"/>
+        <Field name="BANCO_DE_DADOS" type="String" visibility="private" isFinal="true"/>
+        <Field name="USUARIO" type="String" visibility="private" isFinal="true"/>
+        <Field name="SENHA" type="String" visibility="private" isFinal="true"/>
+        <Field name="URL" type="String" visibility="private" isFinal="true"/>
+        <Field name="conexao" type="Connection" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="getConexao" returnType="Connection" visibility="public"/>
+        <Method name="confirmar" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="FornecedorDAO" package="com.dao" visibility="public" xPosition="920.0" yPosition="20.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="inserir" returnType="void" visibility="public">
+          <Argument type="Fornecedor" name="fornecedor"/>
+        </Method>
+        <Method name="alterar" returnType="void" visibility="public">
+          <Argument type="Fornecedor" name="fornecedor"/>
+        </Method>
+        <Method name="excluir" returnType="void" visibility="public">
+          <Argument type="Fornecedor" name="fornecedor"/>
+        </Method>
+        <Method name="listarTodos" returnType="ArrayList&lt;Fornecedor&gt;" visibility="public"/>
+        <Method name="recuperar" returnType="Fornecedor" visibility="public">
+          <Argument type="int" name="codigo"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Interface name="IDAO" package="com.dao" visibility="public" xPosition="1220.0" yPosition="20.0">
+      <Methods>
+        <Method name="inserir" returnType="void" visibility="public">
+          <Argument type="Tipo" name="objeto"/>
+        </Method>
+        <Method name="alterar" returnType="void" visibility="public">
+          <Argument type="Tipo" name="objeto"/>
+        </Method>
+        <Method name="excluir" returnType="void" visibility="public">
+          <Argument type="Tipo" name="objeto"/>
+        </Method>
+        <Method name="listarTodos" returnType="ArrayList&lt;Tipo&gt;" visibility="public"/>
+        <Method name="recuperar" returnType="Tipo" visibility="public">
+          <Argument type="int" name="codigo"/>
+        </Method>
+      </Methods>
+    </Interface>
+    <Class name="ProdutoDAO" package="com.dao" visibility="public" xPosition="1520.0" yPosition="20.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="inserir" returnType="void" visibility="public">
+          <Argument type="Produto" name="produto"/>
+        </Method>
+        <Method name="alterar" returnType="void" visibility="public">
+          <Argument type="Produto" name="produto"/>
+        </Method>
+        <Method name="entradaEstoque" returnType="void" visibility="public">
+          <Argument type="Conexao" name="c"/>
+          <Argument type="int" name="codigo"/>
+          <Argument type="int" name="quantidade"/>
+        </Method>
+        <Method name="saidaEstoque" returnType="void" visibility="public">
+          <Argument type="Conexao" name="c"/>
+          <Argument type="int" name="codigo"/>
+          <Argument type="int" name="quantidade"/>
+        </Method>
+        <Method name="excluir" returnType="void" visibility="public">
+          <Argument type="Produto" name="produto"/>
+        </Method>
+        <Method name="listarTodos" returnType="ArrayList&lt;Produto&gt;" visibility="public"/>
+        <Method name="recuperar" returnType="Produto" visibility="public">
+          <Argument type="int" name="codigo"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="VendaDAO" package="com.dao" visibility="public" xPosition="1820.0" yPosition="20.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="inserir" returnType="void" visibility="public">
+          <Argument type="Venda" name="venda"/>
+        </Method>
+        <Method name="alterar" returnType="void" visibility="public">
+          <Argument type="Venda" name="venda"/>
+        </Method>
+        <Method name="excluir" returnType="void" visibility="public">
+          <Argument type="Venda" name="venda"/>
+        </Method>
+        <Method name="listarTodos" returnType="ArrayList&lt;Venda&gt;" visibility="public"/>
+        <Method name="recuperar" returnType="Venda" visibility="public">
+          <Argument type="int" name="codigo"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="BuscaCliente" package="com.gui" visibility="public" xPosition="2120.0" yPosition="20.0">
+      <Fields>
+        <Field name="parent" type="JInternalFrame" visibility="package"/>
+        <Field name="lbFiltro" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="pnFiltro" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="spGrade" type="javax.swing.JScrollPane" visibility="private"/>
+        <Field name="tbGrade" type="javax.swing.JTable" visibility="private"/>
+        <Field name="tfFiltro" type="javax.swing.JTextField" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="JInternalFrame" name="parent"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="carregarGrade" returnType="void" visibility="private"/>
+        <Method name="initComponents" returnType="void" visibility="private"/>
+        <Method name="tbGradeMouseClicked" returnType="void" visibility="private">
+          <Argument type="java.awt.event.MouseEvent" name="evt"/>
+        </Method>
+        <Method name="tfFiltroKeyReleased" returnType="void" visibility="private">
+          <Argument type="java.awt.event.KeyEvent" name="evt"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="BuscaFornecedor" package="com.gui" visibility="public" xPosition="20.0" yPosition="420.0">
+      <Fields>
+        <Field name="parent" type="JInternalFrame" visibility="package"/>
+        <Field name="lbFiltro" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="pnFiltro" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="spGrade" type="javax.swing.JScrollPane" visibility="private"/>
+        <Field name="tbGrade" type="javax.swing.JTable" visibility="private"/>
+        <Field name="tfFiltro" type="javax.swing.JTextField" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="JInternalFrame" name="parent"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="carregarGrade" returnType="void" visibility="private"/>
+        <Method name="initComponents" returnType="void" visibility="private"/>
+        <Method name="tbGradeMouseClicked" returnType="void" visibility="private">
+          <Argument type="java.awt.event.MouseEvent" name="evt"/>
+        </Method>
+        <Method name="tfFiltroKeyReleased" returnType="void" visibility="private">
+          <Argument type="java.awt.event.KeyEvent" name="evt"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="BuscaProduto" package="com.gui" visibility="public" xPosition="320.0" yPosition="420.0">
+      <Fields>
+        <Field name="parent" type="JInternalFrame" visibility="package"/>
+        <Field name="lbFiltro" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="pnFiltro" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="spGrade" type="javax.swing.JScrollPane" visibility="private"/>
+        <Field name="tbGrade" type="javax.swing.JTable" visibility="private"/>
+        <Field name="tfFiltro" type="javax.swing.JTextField" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="JInternalFrame" name="parent"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="carregarGrade" returnType="void" visibility="private"/>
+        <Method name="initComponents" returnType="void" visibility="private"/>
+        <Method name="tbGradeMouseClicked" returnType="void" visibility="private">
+          <Argument type="java.awt.event.MouseEvent" name="evt"/>
+        </Method>
+        <Method name="tfFiltroKeyReleased" returnType="void" visibility="private">
+          <Argument type="java.awt.event.KeyEvent" name="evt"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="CadastroCliente" package="com.gui" visibility="public" xPosition="620.0" yPosition="420.0">
+      <Fields>
+        <Field name="cliente" type="Cliente" visibility="private"/>
+        <Field name="clienteDAO" type="ClienteDAO" visibility="private"/>
+        <Field name="barraFerramentas" type="javax.swing.JToolBar" visibility="private"/>
+        <Field name="btCancelar" type="javax.swing.JButton" visibility="private"/>
+        <Field name="btExcluir" type="javax.swing.JButton" visibility="private"/>
+        <Field name="btNovo" type="javax.swing.JButton" visibility="private"/>
+        <Field name="btSalvar" type="javax.swing.JButton" visibility="private"/>
+        <Field name="ftfCpf" type="javax.swing.JFormattedTextField" visibility="private"/>
+        <Field name="ftfDataNascimento" type="javax.swing.JFormattedTextField" visibility="private"/>
+        <Field name="ftfNome" type="javax.swing.JFormattedTextField" visibility="private"/>
+        <Field name="lbCpf" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="lbDataNascimento" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="lbNome" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="pnBarraFerramentas" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="pnConteudo" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="pnForm" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="spGrade" type="javax.swing.JScrollPane" visibility="private"/>
+        <Field name="tbGrade" type="javax.swing.JTable" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="initComponents" returnType="void" visibility="private"/>
+        <Method name="btNovoActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="btSalvarActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="btExcluirActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="btCancelarActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="tbGradeMouseClicked" returnType="void" visibility="private">
+          <Argument type="java.awt.event.MouseEvent" name="evt"/>
+        </Method>
+        <Method name="habilitarFormulario" returnType="void" visibility="private">
+          <Argument type="boolean" name="ativo"/>
+        </Method>
+        <Method name="limpaFormulario" returnType="void" visibility="private"/>
+        <Method name="validarFormulario" returnType="boolean" visibility="private"/>
+        <Method name="carregarGrade" returnType="void" visibility="private"/>
+      </Methods>
+    </Class>
+    <Class name="CadastroFornecedor" package="com.gui" visibility="public" xPosition="920.0" yPosition="420.0">
+      <Fields>
+        <Field name="fornecedor" type="Fornecedor" visibility="private"/>
+        <Field name="fornecedorDAO" type="FornecedorDAO" visibility="private"/>
+        <Field name="barraFerramentas" type="javax.swing.JToolBar" visibility="private"/>
+        <Field name="btCancelar" type="javax.swing.JButton" visibility="private"/>
+        <Field name="btExcluir" type="javax.swing.JButton" visibility="private"/>
+        <Field name="btNovo" type="javax.swing.JButton" visibility="private"/>
+        <Field name="btSalvar" type="javax.swing.JButton" visibility="private"/>
+        <Field name="ftfCnpj" type="javax.swing.JFormattedTextField" visibility="private"/>
+        <Field name="ftfNome" type="javax.swing.JFormattedTextField" visibility="private"/>
+        <Field name="lbCnpj" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="lbNome" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="pnBarraFerramentas" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="pnConteudo" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="pnForm" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="spGrade" type="javax.swing.JScrollPane" visibility="private"/>
+        <Field name="tbGrade" type="javax.swing.JTable" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="initComponents" returnType="void" visibility="private"/>
+        <Method name="btNovoActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="btSalvarActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="btExcluirActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="btCancelarActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="tbGradeMouseClicked" returnType="void" visibility="private">
+          <Argument type="java.awt.event.MouseEvent" name="evt"/>
+        </Method>
+        <Method name="habilitarFormulario" returnType="void" visibility="private">
+          <Argument type="boolean" name="ativo"/>
+        </Method>
+        <Method name="limpaFormulario" returnType="void" visibility="private"/>
+        <Method name="validarFormulario" returnType="boolean" visibility="private"/>
+        <Method name="carregarGrade" returnType="void" visibility="private"/>
+      </Methods>
+    </Class>
+    <Class name="CadastroProduto" package="com.gui" visibility="public" xPosition="1220.0" yPosition="420.0">
+      <Fields>
+        <Field name="produto" type="Produto" visibility="private"/>
+        <Field name="produtoDAO" type="ProdutoDAO" visibility="private"/>
+        <Field name="barraFerramentas" type="javax.swing.JToolBar" visibility="private"/>
+        <Field name="btCancelar" type="javax.swing.JButton" visibility="private"/>
+        <Field name="btExcluir" type="javax.swing.JButton" visibility="private"/>
+        <Field name="btNovo" type="javax.swing.JButton" visibility="private"/>
+        <Field name="btSalvar" type="javax.swing.JButton" visibility="private"/>
+        <Field name="ftfNome" type="javax.swing.JFormattedTextField" visibility="private"/>
+        <Field name="ftfPrecoCompra" type="javax.swing.JFormattedTextField" visibility="private"/>
+        <Field name="ftfPrecoVenda" type="javax.swing.JFormattedTextField" visibility="private"/>
+        <Field name="lbNome" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="lbPrecoCompra" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="lbPrecoVenda" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="pnBarraFerramentas" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="pnConteudo" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="pnForm" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="spGrade" type="javax.swing.JScrollPane" visibility="private"/>
+        <Field name="tbGrade" type="javax.swing.JTable" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="initComponents" returnType="void" visibility="private"/>
+        <Method name="btNovoActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="btSalvarActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="btExcluirActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="btCancelarActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="tbGradeMouseClicked" returnType="void" visibility="private">
+          <Argument type="java.awt.event.MouseEvent" name="evt"/>
+        </Method>
+        <Method name="habilitarFormulario" returnType="void" visibility="private">
+          <Argument type="boolean" name="ativo"/>
+        </Method>
+        <Method name="limpaFormulario" returnType="void" visibility="private"/>
+        <Method name="validarFormulario" returnType="boolean" visibility="private"/>
+        <Method name="carregarGrade" returnType="void" visibility="private"/>
+      </Methods>
+    </Class>
+    <Class name="LancamentoCompra" package="com.gui" visibility="public" xPosition="1520.0" yPosition="420.0">
+      <Fields>
+        <Field name="compra" type="Compra" visibility="private"/>
+        <Field name="compraDAO" type="CompraDAO" visibility="private"/>
+        <Field name="barraFerramentas" type="javax.swing.JToolBar" visibility="private"/>
+        <Field name="btAdicionarItem" type="javax.swing.JButton" visibility="private"/>
+        <Field name="btCancelar" type="javax.swing.JButton" visibility="private"/>
+        <Field name="btExcluir" type="javax.swing.JButton" visibility="private"/>
+        <Field name="btFinalizar" type="javax.swing.JButton" visibility="private"/>
+        <Field name="btFornecedor" type="javax.swing.JButton" visibility="private"/>
+        <Field name="btNovo" type="javax.swing.JButton" visibility="private"/>
+        <Field name="btProduto" type="javax.swing.JButton" visibility="private"/>
+        <Field name="btRemoverItem" type="javax.swing.JButton" visibility="private"/>
+        <Field name="btSalvar" type="javax.swing.JButton" visibility="private"/>
+        <Field name="ftfDataCompra" type="javax.swing.JFormattedTextField" visibility="private"/>
+        <Field name="ftfFornecedor" type="javax.swing.JFormattedTextField" visibility="private"/>
+        <Field name="ftfProduto" type="javax.swing.JFormattedTextField" visibility="private"/>
+        <Field name="ftfValorTotal" type="javax.swing.JFormattedTextField" visibility="private"/>
+        <Field name="ftfValorUnitario" type="javax.swing.JFormattedTextField" visibility="private"/>
+        <Field name="jPanel2" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="lbDataCompra" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="lbFornecedor" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="lbProduto" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="lbQuantidade" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="lbValorTotal" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="lbValorUnitario" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="pnBarraFerramentas" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="pnCabecalho" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="pnForm" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="pnFormItens" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="pnItens" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="spGrade" type="javax.swing.JScrollPane" visibility="private"/>
+        <Field name="spGradeItens" type="javax.swing.JScrollPane" visibility="private"/>
+        <Field name="spQuantidade" type="javax.swing.JSpinner" visibility="private"/>
+        <Field name="tbGrade" type="javax.swing.JTable" visibility="private"/>
+        <Field name="tbGradeItens" type="javax.swing.JTable" visibility="private"/>
+        <Field name="tpConteudo" type="javax.swing.JTabbedPane" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="initComponents" returnType="void" visibility="private"/>
+        <Method name="btNovoActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="btSalvarActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="btCancelarActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="btFornecedorActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="btProdutoActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="btAdicionarItemActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="btRemoverItemActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="tbGradeMouseClicked" returnType="void" visibility="private">
+          <Argument type="java.awt.event.MouseEvent" name="evt"/>
+        </Method>
+        <Method name="btFinalizarActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="btExcluirActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="setFornecedor" returnType="void" visibility="public">
+          <Argument type="Fornecedor" name="cliente"/>
+        </Method>
+        <Method name="setProduto" returnType="void" visibility="public">
+          <Argument type="Produto" name="produto"/>
+        </Method>
+        <Method name="habilitarFormulario" returnType="void" visibility="private">
+          <Argument type="boolean" name="ativo"/>
+        </Method>
+        <Method name="limpaFormulario" returnType="void" visibility="private"/>
+        <Method name="limpaFormularioItens" returnType="void" visibility="private"/>
+        <Method name="validarFormulario" returnType="boolean" visibility="private"/>
+        <Method name="validarFormularioItens" returnType="boolean" visibility="private"/>
+        <Method name="carregarGrade" returnType="void" visibility="private"/>
+        <Method name="salvar" returnType="void" visibility="private">
+          <Argument type="boolean" name="finalizar"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="LancamentoVenda" package="com.gui" visibility="public" xPosition="1820.0" yPosition="420.0">
+      <Fields>
+        <Field name="venda" type="Venda" visibility="private"/>
+        <Field name="vendaDAO" type="VendaDAO" visibility="private"/>
+        <Field name="barraFerramentas" type="javax.swing.JToolBar" visibility="private"/>
+        <Field name="btAdicionarItem" type="javax.swing.JButton" visibility="private"/>
+        <Field name="btCancelar" type="javax.swing.JButton" visibility="private"/>
+        <Field name="btCliente" type="javax.swing.JButton" visibility="private"/>
+        <Field name="btExcluir" type="javax.swing.JButton" visibility="private"/>
+        <Field name="btFinalizar" type="javax.swing.JButton" visibility="private"/>
+        <Field name="btNovo" type="javax.swing.JButton" visibility="private"/>
+        <Field name="btProduto" type="javax.swing.JButton" visibility="private"/>
+        <Field name="btRemoverItem" type="javax.swing.JButton" visibility="private"/>
+        <Field name="btSalvar" type="javax.swing.JButton" visibility="private"/>
+        <Field name="ftfCliente" type="javax.swing.JFormattedTextField" visibility="private"/>
+        <Field name="ftfDataVenda" type="javax.swing.JFormattedTextField" visibility="private"/>
+        <Field name="ftfProduto" type="javax.swing.JFormattedTextField" visibility="private"/>
+        <Field name="ftfValorTotal" type="javax.swing.JFormattedTextField" visibility="private"/>
+        <Field name="ftfValorUnitario" type="javax.swing.JFormattedTextField" visibility="private"/>
+        <Field name="jPanel2" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="lbCliente" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="lbDataVenda" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="lbProduto" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="lbQuantidade" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="lbValorTotal" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="lbValorUnitario" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="pnBarraFerramentas" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="pnCabecalho" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="pnForm" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="pnFormItens" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="pnItens" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="spGrade" type="javax.swing.JScrollPane" visibility="private"/>
+        <Field name="spGradeItens" type="javax.swing.JScrollPane" visibility="private"/>
+        <Field name="spQuantidade" type="javax.swing.JSpinner" visibility="private"/>
+        <Field name="tbGrade" type="javax.swing.JTable" visibility="private"/>
+        <Field name="tbGradeItens" type="javax.swing.JTable" visibility="private"/>
+        <Field name="tpConteudo" type="javax.swing.JTabbedPane" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="initComponents" returnType="void" visibility="private"/>
+        <Method name="btNovoActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="btSalvarActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="btCancelarActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="btClienteActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="btProdutoActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="btAdicionarItemActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="btRemoverItemActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="tbGradeMouseClicked" returnType="void" visibility="private">
+          <Argument type="java.awt.event.MouseEvent" name="evt"/>
+        </Method>
+        <Method name="btFinalizarActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="btExcluirActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="setCliente" returnType="void" visibility="public">
+          <Argument type="Cliente" name="cliente"/>
+        </Method>
+        <Method name="setProduto" returnType="void" visibility="public">
+          <Argument type="Produto" name="produto"/>
+        </Method>
+        <Method name="habilitarFormulario" returnType="void" visibility="private">
+          <Argument type="boolean" name="ativo"/>
+        </Method>
+        <Method name="limpaFormulario" returnType="void" visibility="private"/>
+        <Method name="limpaFormularioItens" returnType="void" visibility="private"/>
+        <Method name="validarFormulario" returnType="boolean" visibility="private"/>
+        <Method name="validarFormularioItens" returnType="boolean" visibility="private"/>
+        <Method name="carregarGrade" returnType="void" visibility="private"/>
+        <Method name="salvar" returnType="void" visibility="private">
+          <Argument type="boolean" name="finalizar"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Menu" package="com.gui" visibility="public" xPosition="2120.0" yPosition="420.0">
+      <Fields>
+        <Field name="btCliente" type="javax.swing.JButton" visibility="private"/>
+        <Field name="btCompra" type="javax.swing.JButton" visibility="private"/>
+        <Field name="btFornecedor" type="javax.swing.JButton" visibility="private"/>
+        <Field name="btProduto" type="javax.swing.JButton" visibility="private"/>
+        <Field name="btSair" type="javax.swing.JButton" visibility="private"/>
+        <Field name="btVenda" type="javax.swing.JButton" visibility="private"/>
+        <Field name="desktopPane" type="javax.swing.JDesktopPane" visibility="private"/>
+        <Field name="menuBar" type="javax.swing.JMenuBar" visibility="private"/>
+        <Field name="menuCadastros" type="javax.swing.JMenu" visibility="private"/>
+        <Field name="menuMovimentos" type="javax.swing.JMenu" visibility="private"/>
+        <Field name="menuSistema" type="javax.swing.JMenu" visibility="private"/>
+        <Field name="miCliente" type="javax.swing.JMenuItem" visibility="private"/>
+        <Field name="miCompra" type="javax.swing.JMenuItem" visibility="private"/>
+        <Field name="miFornecedor" type="javax.swing.JMenuItem" visibility="private"/>
+        <Field name="miProduto" type="javax.swing.JMenuItem" visibility="private"/>
+        <Field name="miSair" type="javax.swing.JMenuItem" visibility="private"/>
+        <Field name="miVenda" type="javax.swing.JMenuItem" visibility="private"/>
+        <Field name="toolBar" type="javax.swing.JToolBar" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="initComponents" returnType="void" visibility="private"/>
+        <Method name="miProdutoActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="miClienteActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="miFornecedorActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="miVendaActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="miCompraActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="miSairActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="ClienteTableModel" package="com.gui.tm" visibility="public" xPosition="20.0" yPosition="820.0">
+      <Fields>
+        <Field name="colunas" type="String" visibility="private"/>
+        <Field name="dados" type="List&lt;Cliente&gt;" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="getRowCount" returnType="int" visibility="public"/>
+        <Method name="getColumnCount" returnType="int" visibility="public"/>
+        <Method name="getValueAt" returnType="Object" visibility="public">
+          <Argument type="int" name="l"/>
+          <Argument type="int" name="c"/>
+        </Method>
+        <Method name="getColumnName" returnType="String" visibility="public">
+          <Argument type="int" name="c"/>
+        </Method>
+        <Method name="isCellEditable" returnType="boolean" visibility="public">
+          <Argument type="int" name="l"/>
+          <Argument type="int" name="c"/>
+        </Method>
+        <Method name="setDados" returnType="void" visibility="public">
+          <Argument type="List&lt;Cliente&gt;" name="dados"/>
+        </Method>
+        <Method name="getRowValue" returnType="Cliente" visibility="public">
+          <Argument type="int" name="l"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="CompraTableModel" package="com.gui.tm" visibility="public" xPosition="320.0" yPosition="820.0">
+      <Fields>
+        <Field name="SDF" type="SimpleDateFormat" visibility="private" isFinal="true"/>
+        <Field name="NFC" type="NumberFormat" visibility="private" isFinal="true"/>
+        <Field name="colunas" type="String" visibility="private"/>
+        <Field name="dados" type="List&lt;Compra&gt;" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="getRowCount" returnType="int" visibility="public"/>
+        <Method name="getColumnCount" returnType="int" visibility="public"/>
+        <Method name="getValueAt" returnType="Object" visibility="public">
+          <Argument type="int" name="l"/>
+          <Argument type="int" name="c"/>
+        </Method>
+        <Method name="getColumnName" returnType="String" visibility="public">
+          <Argument type="int" name="c"/>
+        </Method>
+        <Method name="isCellEditable" returnType="boolean" visibility="public">
+          <Argument type="int" name="l"/>
+          <Argument type="int" name="c"/>
+        </Method>
+        <Method name="setDados" returnType="void" visibility="public">
+          <Argument type="List&lt;Compra&gt;" name="dados"/>
+        </Method>
+        <Method name="getRowValue" returnType="Compra" visibility="public">
+          <Argument type="int" name="l"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="FornecedorTableModel" package="com.gui.tm" visibility="public" xPosition="620.0" yPosition="820.0">
+      <Fields>
+        <Field name="colunas" type="String" visibility="private"/>
+        <Field name="dados" type="List&lt;Fornecedor&gt;" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="getRowCount" returnType="int" visibility="public"/>
+        <Method name="getColumnCount" returnType="int" visibility="public"/>
+        <Method name="getValueAt" returnType="Object" visibility="public">
+          <Argument type="int" name="l"/>
+          <Argument type="int" name="c"/>
+        </Method>
+        <Method name="getColumnName" returnType="String" visibility="public">
+          <Argument type="int" name="c"/>
+        </Method>
+        <Method name="isCellEditable" returnType="boolean" visibility="public">
+          <Argument type="int" name="l"/>
+          <Argument type="int" name="c"/>
+        </Method>
+        <Method name="setDados" returnType="void" visibility="public">
+          <Argument type="List&lt;Fornecedor&gt;" name="dados"/>
+        </Method>
+        <Method name="getRowValue" returnType="Fornecedor" visibility="public">
+          <Argument type="int" name="l"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="ItemCompraTableModel" package="com.gui.tm" visibility="public" xPosition="920.0" yPosition="820.0">
+      <Fields>
+        <Field name="NF" type="NumberFormat" visibility="private" isFinal="true"/>
+        <Field name="NFC" type="NumberFormat" visibility="private" isFinal="true"/>
+        <Field name="colunas" type="String" visibility="private"/>
+        <Field name="dados" type="List&lt;ItemCompra&gt;" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="getRowCount" returnType="int" visibility="public"/>
+        <Method name="getColumnCount" returnType="int" visibility="public"/>
+        <Method name="getValueAt" returnType="Object" visibility="public">
+          <Argument type="int" name="l"/>
+          <Argument type="int" name="c"/>
+        </Method>
+        <Method name="getColumnName" returnType="String" visibility="public">
+          <Argument type="int" name="c"/>
+        </Method>
+        <Method name="isCellEditable" returnType="boolean" visibility="public">
+          <Argument type="int" name="l"/>
+          <Argument type="int" name="c"/>
+        </Method>
+        <Method name="setDados" returnType="void" visibility="public">
+          <Argument type="List&lt;ItemCompra&gt;" name="dados"/>
+        </Method>
+        <Method name="getRowValue" returnType="ItemCompra" visibility="public">
+          <Argument type="int" name="l"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="ItemVendaTableModel" package="com.gui.tm" visibility="public" xPosition="1220.0" yPosition="820.0">
+      <Fields>
+        <Field name="NF" type="NumberFormat" visibility="private" isFinal="true"/>
+        <Field name="NFC" type="NumberFormat" visibility="private" isFinal="true"/>
+        <Field name="colunas" type="String" visibility="private"/>
+        <Field name="dados" type="List&lt;ItemVenda&gt;" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="getRowCount" returnType="int" visibility="public"/>
+        <Method name="getColumnCount" returnType="int" visibility="public"/>
+        <Method name="getValueAt" returnType="Object" visibility="public">
+          <Argument type="int" name="l"/>
+          <Argument type="int" name="c"/>
+        </Method>
+        <Method name="getColumnName" returnType="String" visibility="public">
+          <Argument type="int" name="c"/>
+        </Method>
+        <Method name="isCellEditable" returnType="boolean" visibility="public">
+          <Argument type="int" name="l"/>
+          <Argument type="int" name="c"/>
+        </Method>
+        <Method name="setDados" returnType="void" visibility="public">
+          <Argument type="List&lt;ItemVenda&gt;" name="dados"/>
+        </Method>
+        <Method name="getRowValue" returnType="ItemVenda" visibility="public">
+          <Argument type="int" name="l"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="ProdutoTableModel" package="com.gui.tm" visibility="public" xPosition="1520.0" yPosition="820.0">
+      <Fields>
+        <Field name="colunas" type="String" visibility="private"/>
+        <Field name="dados" type="List&lt;Produto&gt;" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="getRowCount" returnType="int" visibility="public"/>
+        <Method name="getColumnCount" returnType="int" visibility="public"/>
+        <Method name="getValueAt" returnType="Object" visibility="public">
+          <Argument type="int" name="l"/>
+          <Argument type="int" name="c"/>
+        </Method>
+        <Method name="getColumnName" returnType="String" visibility="public">
+          <Argument type="int" name="c"/>
+        </Method>
+        <Method name="isCellEditable" returnType="boolean" visibility="public">
+          <Argument type="int" name="l"/>
+          <Argument type="int" name="c"/>
+        </Method>
+        <Method name="setDados" returnType="void" visibility="public">
+          <Argument type="List&lt;Produto&gt;" name="dados"/>
+        </Method>
+        <Method name="getRowValue" returnType="Produto" visibility="public">
+          <Argument type="int" name="l"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="VendaTableModel" package="com.gui.tm" visibility="public" xPosition="1820.0" yPosition="820.0">
+      <Fields>
+        <Field name="SDF" type="SimpleDateFormat" visibility="private" isFinal="true"/>
+        <Field name="NFC" type="NumberFormat" visibility="private" isFinal="true"/>
+        <Field name="colunas" type="String" visibility="private"/>
+        <Field name="dados" type="List&lt;Venda&gt;" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="getRowCount" returnType="int" visibility="public"/>
+        <Method name="getColumnCount" returnType="int" visibility="public"/>
+        <Method name="getValueAt" returnType="Object" visibility="public">
+          <Argument type="int" name="l"/>
+          <Argument type="int" name="c"/>
+        </Method>
+        <Method name="getColumnName" returnType="String" visibility="public">
+          <Argument type="int" name="c"/>
+        </Method>
+        <Method name="isCellEditable" returnType="boolean" visibility="public">
+          <Argument type="int" name="l"/>
+          <Argument type="int" name="c"/>
+        </Method>
+        <Method name="setDados" returnType="void" visibility="public">
+          <Argument type="List&lt;Venda&gt;" name="dados"/>
+        </Method>
+        <Method name="getRowValue" returnType="Venda" visibility="public">
+          <Argument type="int" name="l"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Principal" package="com" visibility="public" xPosition="2120.0" yPosition="820.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+        <Method name="lookAndFeel" returnType="void" visibility="private" isStatic="true"/>
+      </Methods>
+    </Class>
+    <Class name="Cliente" package="com.to" visibility="public" xPosition="20.0" yPosition="1220.0">
+      <Fields>
+        <Field name="codigo" type="int" visibility="private"/>
+        <Field name="nome" type="String" visibility="private"/>
+        <Field name="cpf" type="String" visibility="private"/>
+        <Field name="dataNascimento" type="Date" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="int" name="codigo"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getCodigo" returnType="int" visibility="public"/>
+        <Method name="setCodigo" returnType="void" visibility="public">
+          <Argument type="int" name="codigo"/>
+        </Method>
+        <Method name="getNome" returnType="String" visibility="public"/>
+        <Method name="setNome" returnType="void" visibility="public">
+          <Argument type="String" name="nome"/>
+        </Method>
+        <Method name="getCpf" returnType="String" visibility="public"/>
+        <Method name="setCpf" returnType="void" visibility="public">
+          <Argument type="String" name="cpf"/>
+        </Method>
+        <Method name="getDataNascimento" returnType="Date" visibility="public"/>
+        <Method name="setDataNascimento" returnType="void" visibility="public">
+          <Argument type="Date" name="dataNascimento"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+        <Method name="equals" returnType="boolean" visibility="public">
+          <Argument type="Object" name="o"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Compra" package="com.to" visibility="public" xPosition="320.0" yPosition="1220.0">
+      <Fields>
+        <Field name="codigo" type="int" visibility="private"/>
+        <Field name="fornecedor" type="Fornecedor" visibility="private"/>
+        <Field name="dataCompra" type="Date" visibility="private"/>
+        <Field name="valorTotal" type="Double" visibility="private"/>
+        <Field name="situacao" type="Situacao" visibility="private"/>
+        <Field name="itens" type="List&lt;ItemCompra&gt;" visibility="private"/>
+        <Field name="itensRemover" type="List&lt;ItemCompra&gt;" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="int" name="codigo"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getCodigo" returnType="int" visibility="public"/>
+        <Method name="setCodigo" returnType="void" visibility="public">
+          <Argument type="int" name="codigo"/>
+        </Method>
+        <Method name="getFornecedor" returnType="Fornecedor" visibility="public"/>
+        <Method name="setFornecedor" returnType="void" visibility="public">
+          <Argument type="Fornecedor" name="fornecedor"/>
+        </Method>
+        <Method name="getDataCompra" returnType="Date" visibility="public"/>
+        <Method name="setDataCompra" returnType="void" visibility="public">
+          <Argument type="Date" name="dataCompra"/>
+        </Method>
+        <Method name="getValorTotal" returnType="Double" visibility="public"/>
+        <Method name="getSituacao" returnType="Situacao" visibility="public"/>
+        <Method name="setSituacao" returnType="void" visibility="public">
+          <Argument type="Situacao" name="situacao"/>
+        </Method>
+        <Method name="setSituacao" returnType="void" visibility="public">
+          <Argument type="int" name="situacao"/>
+        </Method>
+        <Method name="getItens" returnType="List&lt;ItemCompra&gt;" visibility="public"/>
+        <Method name="getItensRemover" returnType="List&lt;ItemCompra&gt;" visibility="public"/>
+        <Method name="addItem" returnType="void" visibility="public">
+          <Argument type="ItemCompra" name="itemCompra"/>
+        </Method>
+        <Method name="removeItem" returnType="void" visibility="public">
+          <Argument type="ItemCompra" name="itemCompra"/>
+        </Method>
+        <Method name="quantidadeItens" returnType="int" visibility="public"/>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Enum name="Situacao" package="com.to.enums" visibility="public" xPosition="620.0" yPosition="1220.0">
+      <Literals>
+        <Literal name="ABERTA"/>
+        <Literal name="FINALIZADA"/>
+        <Literal name="CANCELADA"/>
+      </Literals>
+    </Enum>
+    <Class name="Fornecedor" package="com.to" visibility="public" xPosition="920.0" yPosition="1220.0">
+      <Fields>
+        <Field name="codigo" type="int" visibility="private"/>
+        <Field name="nome" type="String" visibility="private"/>
+        <Field name="cnpj" type="String" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="int" name="codigo"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getCodigo" returnType="int" visibility="public"/>
+        <Method name="setCodigo" returnType="void" visibility="public">
+          <Argument type="int" name="codigo"/>
+        </Method>
+        <Method name="getNome" returnType="String" visibility="public"/>
+        <Method name="setNome" returnType="void" visibility="public">
+          <Argument type="String" name="nome"/>
+        </Method>
+        <Method name="getCnpj" returnType="String" visibility="public"/>
+        <Method name="setCnpj" returnType="void" visibility="public">
+          <Argument type="String" name="cnpj"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+        <Method name="equals" returnType="boolean" visibility="public">
+          <Argument type="Object" name="o"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="ItemCompra" package="com.to" visibility="public" xPosition="1220.0" yPosition="1220.0">
+      <Fields>
+        <Field name="codigo" type="int" visibility="private"/>
+        <Field name="compra" type="Compra" visibility="private"/>
+        <Field name="produto" type="Produto" visibility="private"/>
+        <Field name="quantidade" type="int" visibility="private"/>
+        <Field name="valorUnitario" type="Double" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="int" name="codigo"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getCodigo" returnType="int" visibility="public"/>
+        <Method name="setCodigo" returnType="void" visibility="public">
+          <Argument type="int" name="codigo"/>
+        </Method>
+        <Method name="getCompra" returnType="Compra" visibility="public"/>
+        <Method name="setCompra" returnType="void" visibility="public">
+          <Argument type="Compra" name="compra"/>
+        </Method>
+        <Method name="getProduto" returnType="Produto" visibility="public"/>
+        <Method name="setProduto" returnType="void" visibility="public">
+          <Argument type="Produto" name="produto"/>
+        </Method>
+        <Method name="getQuantidade" returnType="int" visibility="public"/>
+        <Method name="setQuantidade" returnType="void" visibility="public">
+          <Argument type="int" name="quantidade"/>
+        </Method>
+        <Method name="getValorUnitario" returnType="Double" visibility="public"/>
+        <Method name="setValorUnitario" returnType="void" visibility="public">
+          <Argument type="Double" name="valorUnitario"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+        <Method name="equals" returnType="boolean" visibility="public">
+          <Argument type="Object" name="o"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="ItemVenda" package="com.to" visibility="public" xPosition="1520.0" yPosition="1220.0">
+      <Fields>
+        <Field name="codigo" type="int" visibility="private"/>
+        <Field name="venda" type="Venda" visibility="private"/>
+        <Field name="produto" type="Produto" visibility="private"/>
+        <Field name="quantidade" type="int" visibility="private"/>
+        <Field name="valorUnitario" type="Double" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="int" name="codigo"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getCodigo" returnType="int" visibility="public"/>
+        <Method name="setCodigo" returnType="void" visibility="public">
+          <Argument type="int" name="codigo"/>
+        </Method>
+        <Method name="getVenda" returnType="Venda" visibility="public"/>
+        <Method name="setVenda" returnType="void" visibility="public">
+          <Argument type="Venda" name="venda"/>
+        </Method>
+        <Method name="getProduto" returnType="Produto" visibility="public"/>
+        <Method name="setProduto" returnType="void" visibility="public">
+          <Argument type="Produto" name="produto"/>
+        </Method>
+        <Method name="getQuantidade" returnType="int" visibility="public"/>
+        <Method name="setQuantidade" returnType="void" visibility="public">
+          <Argument type="int" name="quantidade"/>
+        </Method>
+        <Method name="getValorUnitario" returnType="Double" visibility="public"/>
+        <Method name="setValorUnitario" returnType="void" visibility="public">
+          <Argument type="Double" name="valorUnitario"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+        <Method name="equals" returnType="boolean" visibility="public">
+          <Argument type="Object" name="o"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Produto" package="com.to" visibility="public" xPosition="1820.0" yPosition="1220.0">
+      <Fields>
+        <Field name="codigo" type="int" visibility="private"/>
+        <Field name="nome" type="String" visibility="private"/>
+        <Field name="precoCompra" type="Double" visibility="private"/>
+        <Field name="precoVenda" type="Double" visibility="private"/>
+        <Field name="quantidade" type="int" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="int" name="codProduto"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getCodigo" returnType="int" visibility="public"/>
+        <Method name="setCodigo" returnType="void" visibility="public">
+          <Argument type="int" name="codigo"/>
+        </Method>
+        <Method name="getNome" returnType="String" visibility="public"/>
+        <Method name="setNome" returnType="void" visibility="public">
+          <Argument type="String" name="nome"/>
+        </Method>
+        <Method name="getPrecoCompra" returnType="Double" visibility="public"/>
+        <Method name="setPrecoCompra" returnType="void" visibility="public">
+          <Argument type="Double" name="precoCompra"/>
+        </Method>
+        <Method name="getPrecoVenda" returnType="Double" visibility="public"/>
+        <Method name="setPrecoVenda" returnType="void" visibility="public">
+          <Argument type="Double" name="precoVenda"/>
+        </Method>
+        <Method name="getQuantidade" returnType="int" visibility="public"/>
+        <Method name="setQuantidade" returnType="void" visibility="public">
+          <Argument type="int" name="quantidade"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+        <Method name="equals" returnType="boolean" visibility="public">
+          <Argument type="Object" name="o"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Venda" package="com.to" visibility="public" xPosition="2120.0" yPosition="1220.0">
+      <Fields>
+        <Field name="codigo" type="int" visibility="private"/>
+        <Field name="cliente" type="Cliente" visibility="private"/>
+        <Field name="dataVenda" type="Date" visibility="private"/>
+        <Field name="valorTotal" type="Double" visibility="private"/>
+        <Field name="situacao" type="Situacao" visibility="private"/>
+        <Field name="itens" type="List&lt;ItemVenda&gt;" visibility="private"/>
+        <Field name="itensRemover" type="List&lt;ItemVenda&gt;" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="int" name="codigo"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getCodigo" returnType="int" visibility="public"/>
+        <Method name="setCodigo" returnType="void" visibility="public">
+          <Argument type="int" name="codigo"/>
+        </Method>
+        <Method name="getCliente" returnType="Cliente" visibility="public"/>
+        <Method name="setCliente" returnType="void" visibility="public">
+          <Argument type="Cliente" name="cliente"/>
+        </Method>
+        <Method name="getDataVenda" returnType="Date" visibility="public"/>
+        <Method name="setDataVenda" returnType="void" visibility="public">
+          <Argument type="Date" name="dataVenda"/>
+        </Method>
+        <Method name="getValorTotal" returnType="Double" visibility="public"/>
+        <Method name="getSituacao" returnType="Situacao" visibility="public"/>
+        <Method name="setSituacao" returnType="void" visibility="public">
+          <Argument type="Situacao" name="situacao"/>
+        </Method>
+        <Method name="setSituacao" returnType="void" visibility="public">
+          <Argument type="int" name="situacao"/>
+        </Method>
+        <Method name="getItens" returnType="List&lt;ItemVenda&gt;" visibility="public"/>
+        <Method name="getItensRemover" returnType="List&lt;ItemVenda&gt;" visibility="public"/>
+        <Method name="addItem" returnType="void" visibility="public">
+          <Argument type="ItemVenda" name="itemVenda"/>
+        </Method>
+        <Method name="removeItem" returnType="void" visibility="public">
+          <Argument type="ItemVenda" name="itemVenda"/>
+        </Method>
+        <Method name="quantidadeItens" returnType="int" visibility="public"/>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="com.dao.ProdutoDAO" target="com.dao.IDAO"/>
+    <HasRelation name="situacao" source="com.to.Venda" target="com.to.enums.Situacao" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="com.to.Venda" target="com.to.Cliente" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="compraDAO" source="com.gui.LancamentoCompra" target="com.dao.CompraDAO" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="produto" source="com.to.ItemVenda" target="com.to.Produto" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="produto" source="com.gui.CadastroProduto" target="com.to.Produto" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="com.gui.tm.ItemCompraTableModel" target="com.to.ItemCompra" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="vendaDAO" source="com.gui.LancamentoVenda" target="com.dao.VendaDAO" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="com.gui.tm.FornecedorTableModel" target="com.to.Fornecedor" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="com.to.ItemVenda" target="com.to.Produto" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="com.gui.tm.ClienteTableModel" target="com.to.Cliente" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="dados" source="com.gui.tm.FornecedorTableModel" target="com.to.Fornecedor" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="List&lt;Fornecedor&gt;"/>
+    <UseRelation source="com.to.Compra" target="com.to.enums.Situacao" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="com.gui.LancamentoVenda" target="com.to.Produto" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="itens" source="com.to.Compra" target="com.to.ItemCompra" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="List&lt;ItemCompra&gt;"/>
+    <UseRelation source="com.to.Venda" target="com.to.Venda" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="fornecedor" source="com.gui.CadastroFornecedor" target="com.to.Fornecedor" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="dados" source="com.gui.tm.ItemCompraTableModel" target="com.to.ItemCompra" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="List&lt;ItemCompra&gt;"/>
+    <UseRelation source="com.gui.tm.VendaTableModel" target="com.to.Venda" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="clienteDAO" source="com.gui.CadastroCliente" target="com.dao.ClienteDAO" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="dados" source="com.gui.tm.CompraTableModel" target="com.to.Compra" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="List&lt;Compra&gt;"/>
+    <UseRelation source="com.gui.tm.CompraTableModel" target="com.to.Compra" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="com.dao.ClienteDAO" target="com.to.Cliente" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="com.dao.FornecedorDAO" target="com.to.Fornecedor" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="com.gui.LancamentoCompra" target="com.to.Produto" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="venda" source="com.gui.LancamentoVenda" target="com.to.Venda" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="com.dao.FornecedorDAO" target="com.dao.IDAO"/>
+    <HasRelation name="cliente" source="com.gui.CadastroCliente" target="com.to.Cliente" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="dados" source="com.gui.tm.ItemVendaTableModel" target="com.to.ItemVenda" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="List&lt;ItemVenda&gt;"/>
+    <HasRelation name="produto" source="com.to.ItemCompra" target="com.to.Produto" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="com.dao.ProdutoDAO" target="com.to.Produto" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="com.gui.LancamentoVenda" target="com.to.Cliente" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="com.dao.VendaDAO" target="com.dao.IDAO"/>
+    <HasRelation name="fornecedorDAO" source="com.gui.CadastroFornecedor" target="com.dao.FornecedorDAO" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="compra" source="com.gui.LancamentoCompra" target="com.to.Compra" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="com.gui.tm.ItemVendaTableModel" target="com.to.Venda" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="com.to.ItemCompra" target="com.to.Compra" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="com.to.ItemCompra" target="com.to.Produto" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="dados" source="com.gui.tm.ProdutoTableModel" target="com.to.Produto" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="List&lt;Produto&gt;"/>
+    <HasRelation name="itensRemover" source="com.to.Compra" target="com.to.ItemCompra" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="List&lt;ItemCompra&gt;"/>
+    <UseRelation source="com.dao.ProdutoDAO" target="com.dao.Conexao" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="com.dao.CompraDAO" target="com.dao.IDAO"/>
+    <UseRelation source="com.gui.tm.ProdutoTableModel" target="com.to.Produto" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="com.dao.CompraDAO" target="com.to.Compra" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="compra" source="com.to.ItemCompra" target="com.to.Compra" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="com.dao.VendaDAO" target="com.to.Venda" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="cliente" source="com.to.Venda" target="com.to.Cliente" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="dados" source="com.gui.tm.VendaTableModel" target="com.to.Venda" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="List&lt;Venda&gt;"/>
+    <UseRelation source="com.to.Compra" target="com.to.Fornecedor" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="com.to.ItemVenda" target="com.to.Venda" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="com.gui.LancamentoCompra" target="com.to.Fornecedor" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="produtoDAO" source="com.gui.CadastroProduto" target="com.dao.ProdutoDAO" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="fornecedor" source="com.to.Compra" target="com.to.Fornecedor" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="com.dao.ClienteDAO" target="com.dao.IDAO"/>
+    <HasRelation name="itens" source="com.to.Venda" target="com.to.ItemVenda" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="List&lt;ItemVenda&gt;"/>
+    <HasRelation name="situacao" source="com.to.Compra" target="com.to.enums.Situacao" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="venda" source="com.to.ItemVenda" target="com.to.Venda" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="com.to.Compra" target="com.to.ItemCompra" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="com.to.Venda" target="com.to.enums.Situacao" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="dados" source="com.gui.tm.ClienteTableModel" target="com.to.Cliente" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="List&lt;Cliente&gt;"/>
+    <HasRelation name="itensRemover" source="com.to.Venda" target="com.to.ItemVenda" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="List&lt;ItemVenda&gt;"/>
+  </ClassDiagramRelations>
+</ClassDiagram>

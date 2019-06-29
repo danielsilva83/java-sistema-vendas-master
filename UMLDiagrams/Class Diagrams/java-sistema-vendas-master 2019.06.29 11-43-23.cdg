@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="java-sistema-vendas-master">
+  <ClassDiagramComponents>
+    <Class name="Cliente" package="com.to" visibility="public" xPosition="593.0" yPosition="131.0">
+      <Fields>
+        <Field name="codigo" type="int" visibility="private"/>
+        <Field name="nome" type="String" visibility="private"/>
+        <Field name="cpf" type="String" visibility="private"/>
+        <Field name="dataNascimento" type="Date" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="int" name="codigo"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getCodigo" returnType="int" visibility="public"/>
+        <Method name="setCodigo" returnType="void" visibility="public">
+          <Argument type="int" name="codigo"/>
+        </Method>
+        <Method name="getNome" returnType="String" visibility="public"/>
+        <Method name="setNome" returnType="void" visibility="public">
+          <Argument type="String" name="nome"/>
+        </Method>
+        <Method name="getCpf" returnType="String" visibility="public"/>
+        <Method name="setCpf" returnType="void" visibility="public">
+          <Argument type="String" name="cpf"/>
+        </Method>
+        <Method name="getDataNascimento" returnType="Date" visibility="public"/>
+        <Method name="setDataNascimento" returnType="void" visibility="public">
+          <Argument type="Date" name="dataNascimento"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+        <Method name="equals" returnType="boolean" visibility="public">
+          <Argument type="Object" name="o"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Compra" package="com.to" visibility="public" xPosition="320.0" yPosition="581.0">
+      <Fields>
+        <Field name="codigo" type="int" visibility="private"/>
+        <Field name="fornecedor" type="Fornecedor" visibility="private"/>
+        <Field name="dataCompra" type="Date" visibility="private"/>
+        <Field name="valorTotal" type="Double" visibility="private"/>
+        <Field name="situacao" type="Situacao" visibility="private"/>
+        <Field name="itens" type="List&lt;ItemCompra&gt;" visibility="private"/>
+        <Field name="itensRemover" type="List&lt;ItemCompra&gt;" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="int" name="codigo"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getCodigo" returnType="int" visibility="public"/>
+        <Method name="setCodigo" returnType="void" visibility="public">
+          <Argument type="int" name="codigo"/>
+        </Method>
+        <Method name="getFornecedor" returnType="Fornecedor" visibility="public"/>
+        <Method name="setFornecedor" returnType="void" visibility="public">
+          <Argument type="Fornecedor" name="fornecedor"/>
+        </Method>
+        <Method name="getDataCompra" returnType="Date" visibility="public"/>
+        <Method name="setDataCompra" returnType="void" visibility="public">
+          <Argument type="Date" name="dataCompra"/>
+        </Method>
+        <Method name="getValorTotal" returnType="Double" visibility="public"/>
+        <Method name="getSituacao" returnType="Situacao" visibility="public"/>
+        <Method name="setSituacao" returnType="void" visibility="public">
+          <Argument type="Situacao" name="situacao"/>
+        </Method>
+        <Method name="setSituacao" returnType="void" visibility="public">
+          <Argument type="int" name="situacao"/>
+        </Method>
+        <Method name="getItens" returnType="List&lt;ItemCompra&gt;" visibility="public"/>
+        <Method name="getItensRemover" returnType="List&lt;ItemCompra&gt;" visibility="public"/>
+        <Method name="addItem" returnType="void" visibility="public">
+          <Argument type="ItemCompra" name="itemCompra"/>
+        </Method>
+        <Method name="removeItem" returnType="void" visibility="public">
+          <Argument type="ItemCompra" name="itemCompra"/>
+        </Method>
+        <Method name="quantidadeItens" returnType="int" visibility="public"/>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Fornecedor" package="com.to" visibility="public" xPosition="1105.0" yPosition="896.0">
+      <Fields>
+        <Field name="codigo" type="int" visibility="private"/>
+        <Field name="nome" type="String" visibility="private"/>
+        <Field name="cnpj" type="String" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="int" name="codigo"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getCodigo" returnType="int" visibility="public"/>
+        <Method name="setCodigo" returnType="void" visibility="public">
+          <Argument type="int" name="codigo"/>
+        </Method>
+        <Method name="getNome" returnType="String" visibility="public"/>
+        <Method name="setNome" returnType="void" visibility="public">
+          <Argument type="String" name="nome"/>
+        </Method>
+        <Method name="getCnpj" returnType="String" visibility="public"/>
+        <Method name="setCnpj" returnType="void" visibility="public">
+          <Argument type="String" name="cnpj"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+        <Method name="equals" returnType="boolean" visibility="public">
+          <Argument type="Object" name="o"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="ItemCompra" package="com.to" visibility="public" xPosition="1105.0" yPosition="376.0">
+      <Fields>
+        <Field name="codigo" type="int" visibility="private"/>
+        <Field name="compra" type="Compra" visibility="private"/>
+        <Field name="produto" type="Produto" visibility="private"/>
+        <Field name="quantidade" type="int" visibility="private"/>
+        <Field name="valorUnitario" type="Double" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="int" name="codigo"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getCodigo" returnType="int" visibility="public"/>
+        <Method name="setCodigo" returnType="void" visibility="public">
+          <Argument type="int" name="codigo"/>
+        </Method>
+        <Method name="getCompra" returnType="Compra" visibility="public"/>
+        <Method name="setCompra" returnType="void" visibility="public">
+          <Argument type="Compra" name="compra"/>
+        </Method>
+        <Method name="getProduto" returnType="Produto" visibility="public"/>
+        <Method name="setProduto" returnType="void" visibility="public">
+          <Argument type="Produto" name="produto"/>
+        </Method>
+        <Method name="getQuantidade" returnType="int" visibility="public"/>
+        <Method name="setQuantidade" returnType="void" visibility="public">
+          <Argument type="int" name="quantidade"/>
+        </Method>
+        <Method name="getValorUnitario" returnType="Double" visibility="public"/>
+        <Method name="setValorUnitario" returnType="void" visibility="public">
+          <Argument type="Double" name="valorUnitario"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+        <Method name="equals" returnType="boolean" visibility="public">
+          <Argument type="Object" name="o"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="ItemVenda" package="com.to" visibility="public" xPosition="1428.0" yPosition="1127.0">
+      <Fields>
+        <Field name="codigo" type="int" visibility="private"/>
+        <Field name="venda" type="Venda" visibility="private"/>
+        <Field name="produto" type="Produto" visibility="private"/>
+        <Field name="quantidade" type="int" visibility="private"/>
+        <Field name="valorUnitario" type="Double" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="int" name="codigo"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getCodigo" returnType="int" visibility="public"/>
+        <Method name="setCodigo" returnType="void" visibility="public">
+          <Argument type="int" name="codigo"/>
+        </Method>
+        <Method name="getVenda" returnType="Venda" visibility="public"/>
+        <Method name="setVenda" returnType="void" visibility="public">
+          <Argument type="Venda" name="venda"/>
+        </Method>
+        <Method name="getProduto" returnType="Produto" visibility="public"/>
+        <Method name="setProduto" returnType="void" visibility="public">
+          <Argument type="Produto" name="produto"/>
+        </Method>
+        <Method name="getQuantidade" returnType="int" visibility="public"/>
+        <Method name="setQuantidade" returnType="void" visibility="public">
+          <Argument type="int" name="quantidade"/>
+        </Method>
+        <Method name="getValorUnitario" returnType="Double" visibility="public"/>
+        <Method name="setValorUnitario" returnType="void" visibility="public">
+          <Argument type="Double" name="valorUnitario"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+        <Method name="equals" returnType="boolean" visibility="public">
+          <Argument type="Object" name="o"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Produto" package="com.to" visibility="public" xPosition="1458.0" yPosition="593.0">
+      <Fields>
+        <Field name="codigo" type="int" visibility="private"/>
+        <Field name="nome" type="String" visibility="private"/>
+        <Field name="precoCompra" type="Double" visibility="private"/>
+        <Field name="precoVenda" type="Double" visibility="private"/>
+        <Field name="quantidade" type="int" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="int" name="codProduto"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getCodigo" returnType="int" visibility="public"/>
+        <Method name="setCodigo" returnType="void" visibility="public">
+          <Argument type="int" name="codigo"/>
+        </Method>
+        <Method name="getNome" returnType="String" visibility="public"/>
+        <Method name="setNome" returnType="void" visibility="public">
+          <Argument type="String" name="nome"/>
+        </Method>
+        <Method name="getPrecoCompra" returnType="Double" visibility="public"/>
+        <Method name="setPrecoCompra" returnType="void" visibility="public">
+          <Argument type="Double" name="precoCompra"/>
+        </Method>
+        <Method name="getPrecoVenda" returnType="Double" visibility="public"/>
+        <Method name="setPrecoVenda" returnType="void" visibility="public">
+          <Argument type="Double" name="precoVenda"/>
+        </Method>
+        <Method name="getQuantidade" returnType="int" visibility="public"/>
+        <Method name="setQuantidade" returnType="void" visibility="public">
+          <Argument type="int" name="quantidade"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+        <Method name="equals" returnType="boolean" visibility="public">
+          <Argument type="Object" name="o"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Venda" package="com.to" visibility="public" xPosition="730.0" yPosition="1161.0">
+      <Fields>
+        <Field name="codigo" type="int" visibility="private"/>
+        <Field name="cliente" type="Cliente" visibility="private"/>
+        <Field name="dataVenda" type="Date" visibility="private"/>
+        <Field name="valorTotal" type="Double" visibility="private"/>
+        <Field name="situacao" type="Situacao" visibility="private"/>
+        <Field name="itens" type="List&lt;ItemVenda&gt;" visibility="private"/>
+        <Field name="itensRemover" type="List&lt;ItemVenda&gt;" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="int" name="codigo"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getCodigo" returnType="int" visibility="public"/>
+        <Method name="setCodigo" returnType="void" visibility="public">
+          <Argument type="int" name="codigo"/>
+        </Method>
+        <Method name="getCliente" returnType="Cliente" visibility="public"/>
+        <Method name="setCliente" returnType="void" visibility="public">
+          <Argument type="Cliente" name="cliente"/>
+        </Method>
+        <Method name="getDataVenda" returnType="Date" visibility="public"/>
+        <Method name="setDataVenda" returnType="void" visibility="public">
+          <Argument type="Date" name="dataVenda"/>
+        </Method>
+        <Method name="getValorTotal" returnType="Double" visibility="public"/>
+        <Method name="getSituacao" returnType="Situacao" visibility="public"/>
+        <Method name="setSituacao" returnType="void" visibility="public">
+          <Argument type="Situacao" name="situacao"/>
+        </Method>
+        <Method name="setSituacao" returnType="void" visibility="public">
+          <Argument type="int" name="situacao"/>
+        </Method>
+        <Method name="getItens" returnType="List&lt;ItemVenda&gt;" visibility="public"/>
+        <Method name="getItensRemover" returnType="List&lt;ItemVenda&gt;" visibility="public"/>
+        <Method name="addItem" returnType="void" visibility="public">
+          <Argument type="ItemVenda" name="itemVenda"/>
+        </Method>
+        <Method name="removeItem" returnType="void" visibility="public">
+          <Argument type="ItemVenda" name="itemVenda"/>
+        </Method>
+        <Method name="quantidadeItens" returnType="int" visibility="public"/>
+      </Methods>
+    </Class>
+    <Enum name="Situacao" package="com.to.enums" visibility="public" xPosition="355.0" yPosition="1285.0">
+      <Literals>
+        <Literal name="ABERTA"/>
+        <Literal name="FINALIZADA"/>
+        <Literal name="CANCELADA"/>
+      </Literals>
+    </Enum>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <UseRelation source="com.to.Compra" target="com.to.ItemCompra" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="situacao" source="com.to.Venda" target="com.to.enums.Situacao" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="itens" source="com.to.Venda" target="com.to.ItemVenda" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="List&lt;ItemVenda&gt;"/>
+    <HasRelation name="situacao" source="com.to.Compra" target="com.to.enums.Situacao" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="com.to.ItemVenda" target="com.to.Produto" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="produto" source="com.to.ItemVenda" target="com.to.Produto" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="compra" source="com.to.ItemCompra" target="com.to.Compra" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="produto" source="com.to.ItemCompra" target="com.to.Produto" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="com.to.ItemCompra" target="com.to.Compra" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="com.to.Compra" target="com.to.Fornecedor" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="fornecedor" source="com.to.Compra" target="com.to.Fornecedor" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="itens" source="com.to.Compra" target="com.to.ItemCompra" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="List&lt;ItemCompra&gt;"/>
+    <UseRelation source="com.to.ItemCompra" target="com.to.Produto" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="com.to.ItemVenda" target="com.to.Venda" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="venda" source="com.to.ItemVenda" target="com.to.Venda" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="com.to.Venda" target="com.to.Cliente" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="com.to.Venda" target="com.to.enums.Situacao" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="cliente" source="com.to.Venda" target="com.to.Cliente" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="itensRemover" source="com.to.Compra" target="com.to.ItemCompra" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="List&lt;ItemCompra&gt;"/>
+    <UseRelation source="com.to.Compra" target="com.to.enums.Situacao" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="com.to.Venda" target="com.to.Venda" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="itensRemover" source="com.to.Venda" target="com.to.ItemVenda" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="List&lt;ItemVenda&gt;"/>
+  </ClassDiagramRelations>
+</ClassDiagram>
