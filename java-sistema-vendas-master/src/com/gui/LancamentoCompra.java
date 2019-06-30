@@ -78,7 +78,7 @@ public class LancamentoCompra extends javax.swing.JInternalFrame {
 
         setClosable(true);
         setIconifiable(true);
-        setTitle("Vendas");
+        setTitle("Compras");
 
         pnBarraFerramentas.setBorder(javax.swing.BorderFactory.createEmptyBorder(10, 10, 0, 10));
         pnBarraFerramentas.setOpaque(false);

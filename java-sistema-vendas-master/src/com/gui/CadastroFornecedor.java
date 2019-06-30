@@ -42,7 +42,7 @@ public class CadastroFornecedor extends javax.swing.JInternalFrame {
 
         setClosable(true);
         setIconifiable(true);
-        setTitle("Cadastro de clientes");
+        setTitle("Cadastro de fornecedores");
 
         pnBarraFerramentas.setBorder(javax.swing.BorderFactory.createEmptyBorder(10, 10, 0, 10));
         pnBarraFerramentas.setOpaque(false);
