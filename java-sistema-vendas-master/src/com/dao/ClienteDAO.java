@@ -4,6 +4,7 @@ import com.to.Cliente;
 import java.sql.Date;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.ArrayList;
 
 /**
@@ -17,11 +18,14 @@ public class ClienteDAO implements IDAO<Cliente> {
     public void inserir(Cliente cliente) throws Exception {
         Conexao c = new Conexao();
         String sql = "INSERT INTO TBCLIENTE (NOME, CPF, DATANASCIMENTO) VALUES (?, ?, ?)";
-        PreparedStatement ps = c.getConexao().prepareStatement(sql);
-        ps.setString(1, cliente.getNome());
-        ps.setString(2, cliente.getCpf());
-        ps.setDate(3, new Date(cliente.getDataNascimento().getTime()));
-        ps.execute();
+        try (PreparedStatement ps = c.getConexao().prepareStatement(sql)) {
+            ps.setString(1, cliente.getNome());
+            ps.setString(2, cliente.getCpf());
+            ps.setDate(3, new Date(cliente.getDataNascimento().getTime()));
+            ps.execute();
+        }catch (SQLException ex ){
+           throw new SQLException("caiu aqui.\n" + ex.getMessage());
+        }
         c.confirmar();
     }
 

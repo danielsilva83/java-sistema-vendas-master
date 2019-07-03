@@ -2,7 +2,7 @@
 
 <ClassDiagram name="java-sistema-vendas-master">
   <ClassDiagramComponents>
-    <Class name="ClienteDAO" package="com.dao" visibility="public" xPosition="20.0" yPosition="20.0">
+    <Class name="ClienteDAO" package="com.dao" visibility="public" xPosition="56.0" yPosition="308.0">
       <Fields/>
       <Constructors/>
       <Methods>
@@ -21,7 +21,7 @@
         </Method>
       </Methods>
     </Class>
-    <Class name="CompraDAO" package="com.dao" visibility="public" xPosition="320.0" yPosition="20.0">
+    <Class name="CompraDAO" package="com.dao" visibility="public" xPosition="373.0" yPosition="26.0">
       <Fields/>
       <Constructors/>
       <Methods>
@@ -40,7 +40,7 @@
         </Method>
       </Methods>
     </Class>
-    <Class name="Conexao" package="com.dao" visibility="public" xPosition="620.0" yPosition="20.0">
+    <Class name="Conexao" package="com.dao" visibility="public" xPosition="1117.0" yPosition="265.0">
       <Fields>
         <Field name="SERVIDOR" type="String" visibility="private" isFinal="true"/>
         <Field name="PORTA" type="String" visibility="private" isFinal="true"/>
@@ -58,7 +58,7 @@
         <Method name="confirmar" returnType="void" visibility="public"/>
       </Methods>
     </Class>
-    <Class name="FornecedorDAO" package="com.dao" visibility="public" xPosition="920.0" yPosition="20.0">
+    <Class name="FornecedorDAO" package="com.dao" visibility="public" xPosition="774.0" yPosition="20.0">
       <Fields/>
       <Constructors/>
       <Methods>
@@ -77,24 +77,7 @@
         </Method>
       </Methods>
     </Class>
-    <Interface name="IDAO" package="com.dao" visibility="public" xPosition="1220.0" yPosition="20.0">
-      <Methods>
-        <Method name="inserir" returnType="void" visibility="public">
-          <Argument type="Tipo" name="objeto"/>
-        </Method>
-        <Method name="alterar" returnType="void" visibility="public">
-          <Argument type="Tipo" name="objeto"/>
-        </Method>
-        <Method name="excluir" returnType="void" visibility="public">
-          <Argument type="Tipo" name="objeto"/>
-        </Method>
-        <Method name="listarTodos" returnType="ArrayList&lt;Tipo&gt;" visibility="public"/>
-        <Method name="recuperar" returnType="Tipo" visibility="public">
-          <Argument type="int" name="codigo"/>
-        </Method>
-      </Methods>
-    </Interface>
-    <Class name="ProdutoDAO" package="com.dao" visibility="public" xPosition="1520.0" yPosition="20.0">
+    <Class name="ProdutoDAO" package="com.dao" visibility="public" xPosition="1536.0" yPosition="158.0">
       <Fields/>
       <Constructors/>
       <Methods>
@@ -123,7 +106,7 @@
         </Method>
       </Methods>
     </Class>
-    <Class name="VendaDAO" package="com.dao" visibility="public" xPosition="1820.0" yPosition="20.0">
+    <Class name="VendaDAO" package="com.dao" visibility="public" xPosition="1767.0" yPosition="45.0">
       <Fields/>
       <Constructors/>
       <Methods>
@@ -142,7 +125,7 @@
         </Method>
       </Methods>
     </Class>
-    <Class name="BuscaCliente" package="com.gui" visibility="public" xPosition="2120.0" yPosition="20.0">
+    <Class name="BuscaCliente" package="com.gui" visibility="public" xPosition="2061.0" yPosition="251.0">
       <Fields>
         <Field name="parent" type="JInternalFrame" visibility="package"/>
         <Field name="lbFiltro" type="javax.swing.JLabel" visibility="private"/>
@@ -167,7 +150,7 @@
         </Method>
       </Methods>
     </Class>
-    <Class name="BuscaFornecedor" package="com.gui" visibility="public" xPosition="20.0" yPosition="420.0">
+    <Class name="BuscaFornecedor" package="com.gui" visibility="public" xPosition="604.0" yPosition="265.0">
       <Fields>
         <Field name="parent" type="JInternalFrame" visibility="package"/>
         <Field name="lbFiltro" type="javax.swing.JLabel" visibility="private"/>
@@ -192,7 +175,7 @@
         </Method>
       </Methods>
     </Class>
-    <Class name="BuscaProduto" package="com.gui" visibility="public" xPosition="320.0" yPosition="420.0">
+    <Class name="BuscaProduto" package="com.gui" visibility="public" xPosition="203.0" yPosition="158.0">
       <Fields>
         <Field name="parent" type="JInternalFrame" visibility="package"/>
         <Field name="lbFiltro" type="javax.swing.JLabel" visibility="private"/>
@@ -217,7 +200,7 @@
         </Method>
       </Methods>
     </Class>
-    <Class name="CadastroCliente" package="com.gui" visibility="public" xPosition="620.0" yPosition="420.0">
+    <Class name="CadastroCliente" package="com.gui" visibility="public" xPosition="129.0" yPosition="486.0">
       <Fields>
         <Field name="cliente" type="Cliente" visibility="private"/>
         <Field name="clienteDAO" type="ClienteDAO" visibility="private"/>
@@ -362,7 +345,7 @@
         <Method name="carregarGrade" returnType="void" visibility="private"/>
       </Methods>
     </Class>
-    <Class name="LancamentoCompra" package="com.gui" visibility="public" xPosition="1520.0" yPosition="420.0">
+    <Class name="LancamentoCompra" package="com.gui" visibility="public" xPosition="425.0" yPosition="486.0">
       <Fields>
         <Field name="compra" type="Compra" visibility="private"/>
         <Field name="compraDAO" type="CompraDAO" visibility="private"/>
@@ -454,7 +437,7 @@
         </Method>
       </Methods>
     </Class>
-    <Class name="LancamentoVenda" package="com.gui" visibility="public" xPosition="1820.0" yPosition="420.0">
+    <Class name="LancamentoVenda" package="com.gui" visibility="public" xPosition="1767.0" yPosition="391.0">
       <Fields>
         <Field name="venda" type="Venda" visibility="private"/>
         <Field name="vendaDAO" type="VendaDAO" visibility="private"/>
@@ -546,7 +529,7 @@
         </Method>
       </Methods>
     </Class>
-    <Class name="Menu" package="com.gui" visibility="public" xPosition="2120.0" yPosition="420.0">
+    <Class name="Menu" package="com.gui" visibility="public" xPosition="2061.0" yPosition="391.0">
       <Fields>
         <Field name="btCliente" type="javax.swing.JButton" visibility="private"/>
         <Field name="btCompra" type="javax.swing.JButton" visibility="private"/>
@@ -592,7 +575,7 @@
         </Method>
       </Methods>
     </Class>
-    <Class name="ClienteTableModel" package="com.gui.tm" visibility="public" xPosition="20.0" yPosition="820.0">
+    <Class name="ClienteTableModel" package="com.gui.tm" visibility="public" xPosition="4.0" yPosition="646.0">
       <Fields>
         <Field name="colunas" type="String" visibility="private"/>
         <Field name="dados" type="List&lt;Cliente&gt;" visibility="private"/>
@@ -620,7 +603,7 @@
         </Method>
       </Methods>
     </Class>
-    <Class name="CompraTableModel" package="com.gui.tm" visibility="public" xPosition="320.0" yPosition="820.0">
+    <Class name="CompraTableModel" package="com.gui.tm" visibility="public" xPosition="98.0" yPosition="1411.0">
       <Fields>
         <Field name="SDF" type="SimpleDateFormat" visibility="private" isFinal="true"/>
         <Field name="NFC" type="NumberFormat" visibility="private" isFinal="true"/>
@@ -650,7 +633,7 @@
         </Method>
       </Methods>
     </Class>
-    <Class name="FornecedorTableModel" package="com.gui.tm" visibility="public" xPosition="620.0" yPosition="820.0">
+    <Class name="FornecedorTableModel" package="com.gui.tm" visibility="public" xPosition="478.0" yPosition="1137.0">
       <Fields>
         <Field name="colunas" type="String" visibility="private"/>
         <Field name="dados" type="List&lt;Fornecedor&gt;" visibility="private"/>
@@ -678,7 +661,7 @@
         </Method>
       </Methods>
     </Class>
-    <Class name="ItemCompraTableModel" package="com.gui.tm" visibility="public" xPosition="920.0" yPosition="820.0">
+    <Class name="ItemCompraTableModel" package="com.gui.tm" visibility="public" xPosition="875.0" yPosition="1423.0">
       <Fields>
         <Field name="NF" type="NumberFormat" visibility="private" isFinal="true"/>
         <Field name="NFC" type="NumberFormat" visibility="private" isFinal="true"/>
@@ -708,7 +691,7 @@
         </Method>
       </Methods>
     </Class>
-    <Class name="ItemVendaTableModel" package="com.gui.tm" visibility="public" xPosition="1220.0" yPosition="820.0">
+    <Class name="ItemVendaTableModel" package="com.gui.tm" visibility="public" xPosition="1682.0" yPosition="1268.0">
       <Fields>
         <Field name="NF" type="NumberFormat" visibility="private" isFinal="true"/>
         <Field name="NFC" type="NumberFormat" visibility="private" isFinal="true"/>
@@ -738,7 +721,7 @@
         </Method>
       </Methods>
     </Class>
-    <Class name="ProdutoTableModel" package="com.gui.tm" visibility="public" xPosition="1520.0" yPosition="820.0">
+    <Class name="ProdutoTableModel" package="com.gui.tm" visibility="public" xPosition="1536.0" yPosition="792.0">
       <Fields>
         <Field name="colunas" type="String" visibility="private"/>
         <Field name="dados" type="List&lt;Produto&gt;" visibility="private"/>
@@ -766,7 +749,7 @@
         </Method>
       </Methods>
     </Class>
-    <Class name="VendaTableModel" package="com.gui.tm" visibility="public" xPosition="1820.0" yPosition="820.0">
+    <Class name="VendaTableModel" package="com.gui.tm" visibility="public" xPosition="1738.0" yPosition="792.0">
       <Fields>
         <Field name="SDF" type="SimpleDateFormat" visibility="private" isFinal="true"/>
         <Field name="NFC" type="NumberFormat" visibility="private" isFinal="true"/>
@@ -796,7 +779,7 @@
         </Method>
       </Methods>
     </Class>
-    <Class name="Principal" package="com" visibility="public" xPosition="2120.0" yPosition="820.0">
+    <Class name="Principal" package="com" visibility="public" xPosition="2061.0" yPosition="520.0">
       <Fields/>
       <Constructors/>
       <Methods>
@@ -806,7 +789,7 @@
         <Method name="lookAndFeel" returnType="void" visibility="private" isStatic="true"/>
       </Methods>
     </Class>
-    <Class name="Cliente" package="com.to" visibility="public" xPosition="20.0" yPosition="1220.0">
+    <Class name="Cliente" package="com.to" visibility="public" xPosition="45.0" yPosition="1032.0">
       <Fields>
         <Field name="codigo" type="int" visibility="private"/>
         <Field name="nome" type="String" visibility="private"/>
@@ -842,7 +825,7 @@
         </Method>
       </Methods>
     </Class>
-    <Class name="Compra" package="com.to" visibility="public" xPosition="320.0" yPosition="1220.0">
+    <Class name="Compra" package="com.to" visibility="public" xPosition="162.0" yPosition="1220.0">
       <Fields>
         <Field name="codigo" type="int" visibility="private"/>
         <Field name="fornecedor" type="Fornecedor" visibility="private"/>
@@ -891,14 +874,7 @@
         <Method name="toString" returnType="String" visibility="public"/>
       </Methods>
     </Class>
-    <Enum name="Situacao" package="com.to.enums" visibility="public" xPosition="620.0" yPosition="1220.0">
-      <Literals>
-        <Literal name="ABERTA"/>
-        <Literal name="FINALIZADA"/>
-        <Literal name="CANCELADA"/>
-      </Literals>
-    </Enum>
-    <Class name="Fornecedor" package="com.to" visibility="public" xPosition="920.0" yPosition="1220.0">
+    <Class name="Fornecedor" package="com.to" visibility="public" xPosition="835.0" yPosition="1236.0">
       <Fields>
         <Field name="codigo" type="int" visibility="private"/>
         <Field name="nome" type="String" visibility="private"/>
@@ -929,7 +905,7 @@
         </Method>
       </Methods>
     </Class>
-    <Class name="ItemCompra" package="com.to" visibility="public" xPosition="1220.0" yPosition="1220.0">
+    <Class name="ItemCompra" package="com.to" visibility="public" xPosition="508.0" yPosition="1372.0">
       <Fields>
         <Field name="codigo" type="int" visibility="private"/>
         <Field name="compra" type="Compra" visibility="private"/>
@@ -970,7 +946,7 @@
         </Method>
       </Methods>
     </Class>
-    <Class name="ItemVenda" package="com.to" visibility="public" xPosition="1520.0" yPosition="1220.0">
+    <Class name="ItemVenda" package="com.to" visibility="public" xPosition="1105.0" yPosition="1236.0">
       <Fields>
         <Field name="codigo" type="int" visibility="private"/>
         <Field name="venda" type="Venda" visibility="private"/>
@@ -1011,7 +987,7 @@
         </Method>
       </Methods>
     </Class>
-    <Class name="Produto" package="com.to" visibility="public" xPosition="1820.0" yPosition="1220.0">
+    <Class name="Produto" package="com.to" visibility="public" xPosition="1050.0" yPosition="792.0">
       <Fields>
         <Field name="codigo" type="int" visibility="private"/>
         <Field name="nome" type="String" visibility="private"/>
@@ -1052,7 +1028,7 @@
         </Method>
       </Methods>
     </Class>
-    <Class name="Venda" package="com.to" visibility="public" xPosition="2120.0" yPosition="1220.0">
+    <Class name="Venda" package="com.to" visibility="public" xPosition="1886.0" yPosition="978.0">
       <Fields>
         <Field name="codigo" type="int" visibility="private"/>
         <Field name="cliente" type="Cliente" visibility="private"/>
@@ -1100,68 +1076,92 @@
         <Method name="quantidadeItens" returnType="int" visibility="public"/>
       </Methods>
     </Class>
+    <Interface name="IDAO" package="com.dao" visibility="public" xPosition="1105.0" yPosition="31.0">
+      <Methods>
+        <Method name="inserir" returnType="void" visibility="public">
+          <Argument type="Tipo" name="objeto"/>
+        </Method>
+        <Method name="alterar" returnType="void" visibility="public">
+          <Argument type="Tipo" name="objeto"/>
+        </Method>
+        <Method name="excluir" returnType="void" visibility="public">
+          <Argument type="Tipo" name="objeto"/>
+        </Method>
+        <Method name="listarTodos" returnType="ArrayList&lt;Tipo&gt;" visibility="public"/>
+        <Method name="recuperar" returnType="Tipo" visibility="public">
+          <Argument type="int" name="codigo"/>
+        </Method>
+      </Methods>
+    </Interface>
+    <Enum name="Situacao" package="com.to.enums" visibility="public" xPosition="478.0" yPosition="960.0">
+      <Literals>
+        <Literal name="ABERTA"/>
+        <Literal name="FINALIZADA"/>
+        <Literal name="CANCELADA"/>
+      </Literals>
+    </Enum>
   </ClassDiagramComponents>
   <ClassDiagramRelations>
-    <HasRelation name="dados" source="com.gui.tm.CompraTableModel" target="com.to.Compra" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="List&lt;Compra&gt;"/>
-    <UseRelation source="com.to.ItemVenda" target="com.to.Venda" sourceCardinality="1..1" targetCardinality="1..1"/>
-    <HasRelation name="cliente" source="com.gui.CadastroCliente" target="com.to.Cliente" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
-    <HasRelation name="dados" source="com.gui.tm.ItemCompraTableModel" target="com.to.ItemCompra" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="List&lt;ItemCompra&gt;"/>
-    <UseRelation source="com.to.ItemCompra" target="com.to.Compra" sourceCardinality="1..1" targetCardinality="1..1"/>
-    <HasRelation name="fornecedorDAO" source="com.gui.CadastroFornecedor" target="com.dao.FornecedorDAO" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
-    <UseRelation source="com.gui.tm.ClienteTableModel" target="com.to.Cliente" sourceCardinality="1..1" targetCardinality="1..1"/>
-    <HasRelation name="fornecedor" source="com.gui.CadastroFornecedor" target="com.to.Fornecedor" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
-    <UseRelation source="com.to.Venda" target="com.to.Venda" sourceCardinality="1..1" targetCardinality="1..1"/>
-    <UseRelation source="com.gui.LancamentoVenda" target="com.to.Cliente" sourceCardinality="1..1" targetCardinality="1..1"/>
-    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="com.dao.FornecedorDAO" target="com.dao.IDAO"/>
-    <UseRelation source="com.dao.FornecedorDAO" target="com.to.Fornecedor" sourceCardinality="1..1" targetCardinality="1..1"/>
-    <HasRelation name="situacao" source="com.to.Venda" target="com.to.enums.Situacao" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
-    <UseRelation source="com.gui.LancamentoCompra" target="com.to.Fornecedor" sourceCardinality="1..1" targetCardinality="1..1"/>
-    <HasRelation name="dados" source="com.gui.tm.FornecedorTableModel" target="com.to.Fornecedor" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="List&lt;Fornecedor&gt;"/>
-    <HasRelation name="dados" source="com.gui.tm.VendaTableModel" target="com.to.Venda" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="List&lt;Venda&gt;"/>
-    <UseRelation source="com.gui.tm.ItemVendaTableModel" target="com.to.Venda" sourceCardinality="1..1" targetCardinality="1..1"/>
-    <UseRelation source="com.gui.tm.ProdutoTableModel" target="com.to.Produto" sourceCardinality="1..1" targetCardinality="1..1"/>
-    <UseRelation source="com.dao.ProdutoDAO" target="com.dao.Conexao" sourceCardinality="1..1" targetCardinality="1..1"/>
-    <UseRelation source="com.gui.tm.CompraTableModel" target="com.to.Compra" sourceCardinality="1..1" targetCardinality="1..1"/>
-    <UseRelation source="com.gui.LancamentoVenda" target="com.to.Produto" sourceCardinality="1..1" targetCardinality="1..1"/>
-    <HasRelation name="dados" source="com.gui.tm.ClienteTableModel" target="com.to.Cliente" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="List&lt;Cliente&gt;"/>
-    <HasRelation name="produto" source="com.to.ItemCompra" target="com.to.Produto" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
-    <HasRelation name="produto" source="com.gui.CadastroProduto" target="com.to.Produto" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
-    <HasRelation name="dados" source="com.gui.tm.ProdutoTableModel" target="com.to.Produto" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="List&lt;Produto&gt;"/>
-    <HasRelation name="compra" source="com.to.ItemCompra" target="com.to.Compra" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
-    <UseRelation source="com.gui.tm.VendaTableModel" target="com.to.Venda" sourceCardinality="1..1" targetCardinality="1..1"/>
-    <UseRelation source="com.dao.ClienteDAO" target="com.to.Cliente" sourceCardinality="1..1" targetCardinality="1..1"/>
-    <HasRelation name="clienteDAO" source="com.gui.CadastroCliente" target="com.dao.ClienteDAO" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
     <UseRelation source="com.gui.tm.FornecedorTableModel" target="com.to.Fornecedor" sourceCardinality="1..1" targetCardinality="1..1"/>
-    <UseRelation source="com.gui.LancamentoCompra" target="com.to.Produto" sourceCardinality="1..1" targetCardinality="1..1"/>
-    <HasRelation name="produto" source="com.to.ItemVenda" target="com.to.Produto" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
-    <HasRelation name="itens" source="com.to.Compra" target="com.to.ItemCompra" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="List&lt;ItemCompra&gt;"/>
-    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="com.dao.ClienteDAO" target="com.dao.IDAO"/>
-    <HasRelation name="compraDAO" source="com.gui.LancamentoCompra" target="com.dao.CompraDAO" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
-    <HasRelation name="itensRemover" source="com.to.Compra" target="com.to.ItemCompra" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="List&lt;ItemCompra&gt;"/>
-    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="com.dao.CompraDAO" target="com.dao.IDAO"/>
-    <HasRelation name="itens" source="com.to.Venda" target="com.to.ItemVenda" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="List&lt;ItemVenda&gt;"/>
-    <HasRelation name="compra" source="com.gui.LancamentoCompra" target="com.to.Compra" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
-    <UseRelation source="com.to.Venda" target="com.to.Cliente" sourceCardinality="1..1" targetCardinality="1..1"/>
-    <UseRelation source="com.dao.ProdutoDAO" target="com.to.Produto" sourceCardinality="1..1" targetCardinality="1..1"/>
-    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="com.dao.VendaDAO" target="com.dao.IDAO"/>
-    <UseRelation source="com.to.Compra" target="com.to.ItemCompra" sourceCardinality="1..1" targetCardinality="1..1"/>
-    <HasRelation name="vendaDAO" source="com.gui.LancamentoVenda" target="com.dao.VendaDAO" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
-    <UseRelation source="com.to.Venda" target="com.to.enums.Situacao" sourceCardinality="1..1" targetCardinality="1..1"/>
     <HasRelation name="fornecedor" source="com.to.Compra" target="com.to.Fornecedor" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
-    <UseRelation source="com.dao.CompraDAO" target="com.to.Compra" sourceCardinality="1..1" targetCardinality="1..1"/>
-    <UseRelation source="com.gui.tm.ItemCompraTableModel" target="com.to.ItemCompra" sourceCardinality="1..1" targetCardinality="1..1"/>
-    <UseRelation source="com.to.ItemVenda" target="com.to.Produto" sourceCardinality="1..1" targetCardinality="1..1"/>
-    <UseRelation source="com.to.Compra" target="com.to.Fornecedor" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="clienteDAO" source="com.gui.CadastroCliente" target="com.dao.ClienteDAO" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="cliente" source="com.gui.CadastroCliente" target="com.to.Cliente" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="produto" source="com.to.ItemCompra" target="com.to.Produto" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="com.gui.LancamentoVenda" target="com.to.Cliente" sourceCardinality="1..1" targetCardinality="1..1"/>
     <HasRelation name="itensRemover" source="com.to.Venda" target="com.to.ItemVenda" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="List&lt;ItemVenda&gt;"/>
-    <HasRelation name="situacao" source="com.to.Compra" target="com.to.enums.Situacao" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
-    <HasRelation name="venda" source="com.to.ItemVenda" target="com.to.Venda" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="com.gui.tm.CompraTableModel" target="com.to.Compra" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="dados" source="com.gui.tm.ClienteTableModel" target="com.to.Cliente" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="List&lt;Cliente&gt;"/>
+    <HasRelation name="compra" source="com.gui.LancamentoCompra" target="com.to.Compra" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="com.gui.LancamentoVenda" target="com.to.Produto" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="compra" source="com.to.ItemCompra" target="com.to.Compra" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="com.gui.tm.ClienteTableModel" target="com.to.Cliente" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="com.to.Venda" target="com.to.enums.Situacao" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="com.dao.VendaDAO" target="com.to.Venda" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="com.to.ItemCompra" target="com.to.Compra" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="venda" source="com.gui.LancamentoVenda" target="com.to.Venda" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="situacao" source="com.to.Venda" target="com.to.enums.Situacao" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="dados" source="com.gui.tm.VendaTableModel" target="com.to.Venda" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="List&lt;Venda&gt;"/>
+    <HasRelation name="produto" source="com.gui.CadastroProduto" target="com.to.Produto" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
     <HasRelation name="cliente" source="com.to.Venda" target="com.to.Cliente" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="com.to.Compra" target="com.to.ItemCompra" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="com.dao.FornecedorDAO" target="com.dao.IDAO"/>
+    <HasRelation name="venda" source="com.to.ItemVenda" target="com.to.Venda" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="situacao" source="com.to.Compra" target="com.to.enums.Situacao" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="com.dao.ProdutoDAO" target="com.dao.IDAO"/>
+    <HasRelation name="compraDAO" source="com.gui.LancamentoCompra" target="com.dao.CompraDAO" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="com.to.Compra" target="com.to.enums.Situacao" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="dados" source="com.gui.tm.ItemCompraTableModel" target="com.to.ItemCompra" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="List&lt;ItemCompra&gt;"/>
+    <HasRelation name="dados" source="com.gui.tm.CompraTableModel" target="com.to.Compra" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="List&lt;Compra&gt;"/>
+    <UseRelation source="com.dao.ProdutoDAO" target="com.dao.Conexao" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="com.gui.LancamentoCompra" target="com.to.Fornecedor" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="com.gui.tm.ItemCompraTableModel" target="com.to.ItemCompra" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="com.dao.CompraDAO" target="com.to.Compra" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="com.to.ItemVenda" target="com.to.Produto" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="vendaDAO" source="com.gui.LancamentoVenda" target="com.dao.VendaDAO" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="com.to.Venda" target="com.to.Venda" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="com.to.ItemVenda" target="com.to.Venda" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="itens" source="com.to.Venda" target="com.to.ItemVenda" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="List&lt;ItemVenda&gt;"/>
+    <UseRelation source="com.dao.FornecedorDAO" target="com.to.Fornecedor" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="com.dao.ProdutoDAO" target="com.to.Produto" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="com.dao.CompraDAO" target="com.dao.IDAO"/>
+    <UseRelation source="com.gui.tm.ProdutoTableModel" target="com.to.Produto" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="fornecedorDAO" source="com.gui.CadastroFornecedor" target="com.dao.FornecedorDAO" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="produto" source="com.to.ItemVenda" target="com.to.Produto" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
     <UseRelation source="com.to.ItemCompra" target="com.to.Produto" sourceCardinality="1..1" targetCardinality="1..1"/>
     <HasRelation name="dados" source="com.gui.tm.ItemVendaTableModel" target="com.to.ItemVenda" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="List&lt;ItemVenda&gt;"/>
-    <HasRelation name="venda" source="com.gui.LancamentoVenda" target="com.to.Venda" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
-    <UseRelation source="com.dao.VendaDAO" target="com.to.Venda" sourceCardinality="1..1" targetCardinality="1..1"/>
-    <UseRelation source="com.to.Compra" target="com.to.enums.Situacao" sourceCardinality="1..1" targetCardinality="1..1"/>
-    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="com.dao.ProdutoDAO" target="com.dao.IDAO"/>
+    <UseRelation source="com.gui.tm.ItemVendaTableModel" target="com.to.Venda" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="com.to.Compra" target="com.to.Fornecedor" sourceCardinality="1..1" targetCardinality="1..1"/>
     <HasRelation name="produtoDAO" source="com.gui.CadastroProduto" target="com.dao.ProdutoDAO" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="dados" source="com.gui.tm.ProdutoTableModel" target="com.to.Produto" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="List&lt;Produto&gt;"/>
+    <HasRelation name="fornecedor" source="com.gui.CadastroFornecedor" target="com.to.Fornecedor" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="com.dao.ClienteDAO" target="com.to.Cliente" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="itens" source="com.to.Compra" target="com.to.ItemCompra" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="List&lt;ItemCompra&gt;"/>
+    <HasRelation name="itensRemover" source="com.to.Compra" target="com.to.ItemCompra" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="List&lt;ItemCompra&gt;"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="com.dao.ClienteDAO" target="com.dao.IDAO"/>
+    <HasRelation name="dados" source="com.gui.tm.FornecedorTableModel" target="com.to.Fornecedor" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="List&lt;Fornecedor&gt;"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="com.dao.VendaDAO" target="com.dao.IDAO"/>
+    <UseRelation source="com.gui.tm.VendaTableModel" target="com.to.Venda" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="com.to.Venda" target="com.to.Cliente" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="com.gui.LancamentoCompra" target="com.to.Produto" sourceCardinality="1..1" targetCardinality="1..1"/>
   </ClassDiagramRelations>
 </ClassDiagram>

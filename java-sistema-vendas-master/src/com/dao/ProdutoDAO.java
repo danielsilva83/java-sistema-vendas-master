@@ -3,6 +3,7 @@ package com.dao;
 import com.to.Produto;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.ArrayList;
 
 /**
@@ -16,11 +17,14 @@ public class ProdutoDAO implements IDAO<Produto> {
     public void inserir(Produto produto) throws Exception {
         Conexao c = new Conexao();
         String sql = "INSERT INTO TBPRODUTO (NOME, PRECOCOMPRA, PRECOVENDA, QUANTIDADEESTOQUE) VALUES (?, ?, ?, 0)";
-        PreparedStatement ps = c.getConexao().prepareStatement(sql);
-        ps.setString(1, produto.getNome());
-        ps.setDouble(2, produto.getPrecoCompra());
-        ps.setDouble(3, produto.getPrecoVenda());
-        ps.execute();
+        try (PreparedStatement ps = c.getConexao().prepareStatement(sql)){
+            ps.setString(1, produto.getNome());
+            ps.setDouble(2, produto.getPrecoCompra());
+            ps.setDouble(3, produto.getPrecoVenda());
+            ps.execute();
+        }catch (SQLException ex ){
+           throw new SQLException("caiu aqui.\n" + ex.getMessage());
+        }
         c.confirmar();
     }
 
